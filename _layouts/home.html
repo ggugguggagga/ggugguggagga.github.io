@@ -29,6 +29,7 @@ layout: default
     <div class="c-social">
       <div class="c-social__title">Social</div>
       <ul class="c-social__list u-lists-reset">
+        <li class="c-social__item"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         {% if site.social-twitter %}
           <li class="c-social__item"><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><div data-icon='ei-sc-twitter' data-size='s'></div></a></li>
         {% else %}
@@ -60,11 +61,6 @@ layout: default
         {% if site.social-linkedin %}
           <li class="c-social__item"><a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank"><div data-icon='ei-sc-linkedin' data-size='s'></div></a></li>
         {% else %}
-        {% endif %}
-        {% if site.social-email %}
-          <li class="c-social__item"><a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
-        {% else %}
-          <li class="c-social__item"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         {% endif %}
       </ul>
     </div>
