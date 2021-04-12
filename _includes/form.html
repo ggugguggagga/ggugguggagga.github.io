@@ -1,25 +1,12 @@
-<div class="c-form-box">
-  <form class="c-form" action="https://formspree.io/f/xrgrgvzk" method="POST">
-    <div class="c-form-bnt__close" data-icon='ei-close' data-size='s'></div>
-      <div class="c-form__title">You can contact me!</div>
-    <div class="c-form__group">
-      <label for="form-name">Your Name (Required)</label>
-      <input class="c-form__input" id="form-name" type="text" name="name" required>
-    </div>
-    <div class="c-form__group">
-      <label for="form-email">Your Email (Required)</label>
-      <input class="c-form__input" id="form-email" type="email" name="_replyto" required>
-    </div>
-    <div class="c-form__group">
-      <label for="form-subject">Subject</label>
-      <input class="c-form__input" id="form-subject" type="text" name="_subject">
-    </div>
-    <div class="c-form__group">
-      <label for="form-text">Your Message (Required)</label>
-      <textarea class="c-form__input" id="form-text" name="text" rows="10" required></textarea>
-    </div>
-    <div class="c-form__group">
-      <button class="c-btn c-btn--secondary c-btn--big c-btn--shadow" type="submit">Send</button>
-    </div>
-  </form>
-</div> <!-- /.c-form-box -->
+<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xrgrgvzk" method="post">
+  <fieldset id="fs-frm-inputs">
+    <label for="full-name">Full Name</label>
+    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+    <label for="email-address">Email Address</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+    <label for="message">Message</label>
+    <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+  </fieldset>
+  <input type="submit" value="Submit">
+</form>
