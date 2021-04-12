@@ -4,7 +4,7 @@ title: test
 image: potato.png
 date: 2021-04-12-18:55:40
 tags: [books, rest]
-categories: c_c++
+categories: cc++
 ---
 
 

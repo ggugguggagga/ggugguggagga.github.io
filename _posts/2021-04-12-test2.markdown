@@ -4,7 +4,7 @@ title: test2
 image: ggugguggagga_full.png
 date: 2021-04-12-20:45
 tags: [hmm]
-categories: c_c++
+categories: cc++
 ---
 
 
