@@ -4,7 +4,7 @@ title: BaekJoon 2557
 image: baekjoon.png
 date: 2021-04-13-12:34
 tags: [baekjoon, HelloWorld]
-categories: baek
+categories: baekjoon
 ---
 
 백준 2557번<br>
