@@ -7,24 +7,8 @@ tags: [baekjoon, HelloWorld]
 categories: baekjoon
 ---
 
-<nav id="lang-sel" >
-    <ul class="lang">
-        {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
-        {% capture link2 %}{{ site.baseurl_root }}/en{{ page.url}}{% endcapture %}
-        {% if site.lang == "ko" %}
-        <li class="masthead_menu-item visible-links">
-	        <a href="{{ link1 }}" class="enabled">{% t global.korean%} </a>|<a href="{{ link2 }}"> {% t global.english%}</a>
-        </li>
-        {% elsif site.lang == "en" %}
-        <li class="masthead_menu-item lang">
-	        <a href="{{ link1 }}">{% t global.korean%} </a>|<a href="{{ link2 }}" class="enabled"> {% t global.english%}</a>
-        </li>
-        {% endif %}
-    </ul>
- </nav>
-
 BaekJoon Number 2557<br>
-Problem: Print Hello World!
+Problem: Print Hello World!를 출력하시오.
 
 
 {% highlight c++ %}
