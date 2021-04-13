@@ -14,6 +14,24 @@ $(document).ready(function () {
     noResultsText: '<li>No results found</li>'
   })
 
+  $(document).ready(function() {
+    function toggleHandle() {
+      $('.slider round').toggleClass('slide');
+    }
+    
+    if (localStorage.getItem('switch-state') && localStorage.getItem('switch-state') === "true") {
+      $('.toggle-menu-lang-cont').addClass('color-swap');
+       toggleHandle(); 
+    }
+  
+    $('.toggle-menu-lang-cont').click(function() {
+      let el = $('.toggle-menu-lang-cont');
+       toggleHandle();
+      el.toggleClass('color-swap');
+      localStorage.setItem('switch-state', el.hasClass('color-swap'));
+    });
+  });
+
   /* =======================
   // Responsive videos
   ======================= */
