@@ -11,7 +11,7 @@ BaekJoon Number 2557<br>
 Problem: Print Hello World!를 출력하시오.
 
 
-{% highlight c++ %}
+```c++
 #include <iostream>
 using namespace std;
 
@@ -19,4 +19,4 @@ int main(){
 	cout << "Hello World!";
 	
 }
-{% endhighlight %}
+```
