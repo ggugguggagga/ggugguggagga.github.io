@@ -85,14 +85,3 @@
   
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
-
-
-$(document).ready(function() {
-  $('.show1').show(); //페이지를 로드할 때 표시할 요소
-  $('.show2').hide(); //페이지를 로드할 때 숨길 요소
-  $('.show1').click(function(){
-  $ ('.show1').hide(); //클릭 시 첫 번째 요소 숨김
-  $ ('.show2').show(); //클릭 시 두 번째 요소 표시
-  return false;
-  });
-  });

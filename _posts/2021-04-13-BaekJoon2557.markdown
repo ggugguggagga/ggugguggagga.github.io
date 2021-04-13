@@ -20,3 +20,20 @@ int main(){
 	
 }
 {% endhighlight %}
+
+
+<details>
+<summary>English</summary>
+<div markdown="1">
+
+This place for English
+
+
+int main(){
+	cout << "Hello World!";
+	
+}
+{% endhighlight %}
+
+</div>
+</details>
