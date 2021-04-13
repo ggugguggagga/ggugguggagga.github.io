@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: 'en'
-permalink: /test
+permalink: /somthing
 title: Test
 image: potato.png
 date: 2021-04-14-12:20

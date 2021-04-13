@@ -2,7 +2,7 @@
 layout: post
 lang: 'ko'
 title: 테스트
-permalink: /test
+permalink: /somthing
 image: potato.png
 date: 2021-04-14-12:20
 tags: [baekjoon, HelloWorld]
