@@ -37,7 +37,7 @@ parallel_localizaion: false # 윈도우에서는 버그가 있어서 false로 �
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:month/:day/:title/:lang/
+permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-paginate
   - jekyll-polyglot
