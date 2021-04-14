@@ -2,9 +2,9 @@
 layout: post
 title: 함수 오버로딩[Function Overloading]
 image: c++.png
-date: 2021-04-14-23:10
+date: 2021-04-14-23:37
 tags: [c++, overloading]
-categories: cc
+categories: c++
 ---
 
 <details>
