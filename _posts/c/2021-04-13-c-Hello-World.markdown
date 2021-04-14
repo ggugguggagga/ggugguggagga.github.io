@@ -7,18 +7,5 @@ tags: [c, Hello_World]
 categories: c
 ---
 
-<details>
-<summary>English</summary>
-<div markdown="1">
-
-Hello World
-
-{% highlight c++ %}
-
-{% endhighlight %}
-
-</div>
-</details>
-<br><br>
 
 Hello World
