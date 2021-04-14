@@ -4,7 +4,7 @@ title: 함수 오버로딩[Function Overloading]
 image: c++.png
 date: 2021-04-14-23:10
 tags: [c++, overloading]
-categories: c++
+categories: cc
 ---
 
 <details>
