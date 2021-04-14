@@ -1,0 +1,43 @@
+---
+layout: post
+title: BaekJoon[10171]
+image: baekjoon.png
+date: 2021-04-14-22:52
+tags: [baekjoon]
+categories: baekjoon
+---
+
+BaekJoon Number 10171<br><br>
+Problem: 아래 예제와 같이 고양이를 출력하시오.
+
+
+{% highlight c++ %}
+#include <iostream>
+using namespace std;
+
+int main(){
+	cout << "\\    /\\" << endl;
+	cout << " )  ( ')" << endl;
+	cout << "(  /  )" << endl;
+	cout << " \\(__)|" << endl;
+	
+}
+{% endhighlight %}
+
+<br>
+
+고양이 귀에 사용되는 역슬래쉬를 출력할려면 \를 붙여야한다. 이거말고도 여러 특수문자를 사용하기 위해서는 역슬래쉬를 사용해야한다.
+<br>
+|특수문자|설명|
+|:---:|:---:|
+|\a|경고음|
+|\b|백스페이스(back space)|
+|\f|폼 피드(form feed)|
+|\n|개 행(new line)|
+|\r|캐리지 리턴(caarriage return)|
+|\t|수평 탭|
+|\v|수직 탭|
+|\'|작은 따옴표 출력|
+|\"|큰 따옴표 출력|
+|\?|물음표 출력|
+|\\|역슬래쉬 출력|
