@@ -1,6 +1,6 @@
 ---
 
 layout: category-page
-title: cPlus
+title: c++
 
 ---
