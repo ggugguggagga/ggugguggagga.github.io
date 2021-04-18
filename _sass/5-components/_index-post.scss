@@ -73,8 +73,11 @@
   > table {
     border: 1px dashed black;
   } 
-  td, th{
+  td {
     border: 1px double black;
+  }
+  th{
+    border: 1px dotted black;
   }
 }
 
