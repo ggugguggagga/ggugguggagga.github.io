@@ -70,9 +70,12 @@
 .mbtablestyle {
   border-collapse: collapse;
 
-  > table, td, th {
+  > table {
     border: 1px dashed black;
   } 
+  td, th{
+    border: 1px double black;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
