@@ -71,14 +71,15 @@
   border-collapse: collapse;
   border: 1px solid black;
 
+  > table{
+    border: 1px dashed black;
+  } 
   > td, th {
   border: 1px double black;
   background-color: rgba(188, 215, 241, 0.479);
   }
 
-  > table{
-    border: 1px dashed black;
-  } 
+
 }
 
 @media only screen and (max-width: 1200px) {
