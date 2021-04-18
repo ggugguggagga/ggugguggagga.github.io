@@ -70,14 +70,11 @@
 .mbtablestyle {
   border-collapse: collapse;
 
-  > table {
-    border: 1px dashed black;
-  } 
   td {
     border: 1px double black;
   }
   th{
-    border: 1px dotted black;
+    border: 1px dashed black;
   }
 }
 
