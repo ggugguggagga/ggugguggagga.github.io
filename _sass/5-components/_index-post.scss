@@ -70,8 +70,13 @@
 .mbtablestyle {
   border-collapse: collapse;
 
-> table, td, th {
+> table{
   border: 1px solid black;
+  background-color: rgb(140, 193, 243);
+} 
+> td, th {
+  border: 1px solid black;
+  background-color: rgba(188, 215, 241, 0.479);
   }
 }
 
