@@ -62,3 +62,6 @@ css:
 ...
 +  - /assets/css/syntax.css
 ...
+
+#highlight
+highlighter: rouge
