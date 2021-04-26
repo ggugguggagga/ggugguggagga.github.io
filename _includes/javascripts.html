@@ -3,40 +3,4 @@
 <script src="{{site.baseurl}}/js/jquery.fitvids.js"></script>
 <script src="{{site.baseurl}}/js/simple-jekyll-search.min.js"></script>
 <script src="{{site.baseurl}}/js/main.js"></script>
-
 <!-- /javascripts -->
-
-<script src="./images/indent.min.js"></script>
-<script>
-  // auto-indent (indent.min.js) from https://github.com/zebzhao/indent.js
-  (function(){
-    if (indent) {
-      var codes = document.querySelectorAll("pre > code");
-      var tab = '  ' ; //탭간격 조정 (1 tab? 2 spaces? 4 spaces?)
-      for (var i=0; i < codes.length; i++) {
-        var code = codes[i];
-        var wrapper = (code.parentNode.tagName == "PRE")? code.parentNode : code;
-        if (!wrapper.dataset.noindent) {
-          var option = {tabString: (!wrapper.dataset.tab)? tab : wrapper.dataset.tab};
-          var indented = '';
-          var codeHTML = code.innerHTML;
-          var textArea = document.createElement('textarea');
-          textArea.innerHTML = codeHTML;
-          var codeText = textArea.textContent;
-          var lang = wrapper.classList;
-          if (lang.contains("html") || lang.contains("xml")) {
-            indented = indent.html(codeText, option);
-          } else if (lang.contains("css")) {
-            indented = indent.css(codeText, option);
-          } else {
-            indented = indent.js(codeText, option);
-          }
-          textArea.textContent = indented;
-          code.innerHTML = textArea.innerHTML;
-          textArea = null;
-        }
-      }
-    }
-  })();
-  //end of auto-indent
-</script>
