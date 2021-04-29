@@ -11,6 +11,105 @@ categories: python
 <summary>English</summary>
 <div markdown="1">
 
+Number is numeric data types, such as integers such as 1, 2, and 3, real numbers such as 3.14, and octal or hexadecimal numbers.<br><br>
+
+|section|example|
+|:---:|:---:|
+|integer|365, -500, 0|
+|real income|3.14, -3.14, 2.8e|
+|Octal|0o46, 0o25|
+|Hexadecimal|0xF1, 0x3A|
+{:.mbtablestyle}
+<br><br>
+
+<Blockquote>integer</Blockquote>
+As the name implies, the integer type is a data type that means integer.
+{% highlight python %}
+>>> num = 365
+>>> num = -500
+>>> num = 0
+{% endhighlight %}
+
+<br>
+<Blockquote>real income</Blockquote>
+A floating-point in Python is a number that contains a decimal point.
+{% highlight python %}
+>>> num = 3.14
+>>> num = -3.14
+{% endhighlight %}
+The above method is the method we commonly use, but the expressions used by computers are as follows.
+{% highlight python %}
+>>> num = 3.14e10
+>>> num = 3.14E-10
+{% endhighlight %}
+It doesn't matter if you write e or E.
+
+<br>
+
+<Blockquote>Octal and Hexadecimal</Blockquote>
+The octal number can be expressed as 0o (0O is also possible).
+{% highlight python %}
+>>> num = 0o12
+{% endhighlight %}
+Hexadecimal numbers are expressed as 0x.
+{% highlight python %}
+>>> num = 0xFF
+>>> num = 0x1A
+{% endhighlight %}
+Octal or hexadecimal are numeric data types that are not commonly used in Python.
+
+<br><br><br>
+
+<Blockquote>Four rule calculations</Blockquote>
+Python can do four arithmetic operations (+, -, *, /).
+{% highlight python %}
+>>> a = 1
+>>> b = 2
+>>> a + b
+3
+{% endhighlight %}
+{% highlight python %}
+>>> a * b
+2
+>>> a / b
+0.5
+{% endhighlight %}
+
+<br>
+
+<Blockquote>**Operator</Blockquote>
+The \*\* operator is used like x\*\*y, which returns the value of x to the power of y.
+{% highlight python %}
+>>> a = 2
+>>> b = 3
+>>> a ** b
+8
+{% endhighlight %}
+
+<br>
+
+<Blockquote>%Operator</Blockquote>
+% Is an operator that returns the remainder of division, as you can see if you have used it in c language or c++.
+{% highlight python %}
+>>> 8 % 3
+2
+>>> 3 % 8
+3
+{% endhighlight %}
+
+<br>
+
+<Blockquote>//Operator</Blockquote>
+Using only one / returns the entire division quotient.
+{% highlight python %}
+>>> 9 / 2
+4.5
+{% endhighlight %}
+If two // are used, only integer values are returned after division.
+{% highlight python %}
+>>> 9 // 2
+4
+{% endhighlight %}
 
 <br>
 
@@ -65,7 +164,7 @@ e나 E로 표기해도 상관없다.
 >>> num = 0xFF
 >>> num = 0x1A
 {% endhighlight %}
-8진수나 16진수는 파있너에서 잘 사용하지 않는 형태의 숫자 자료형이다.
+8진수나 16진수는 파이썬에서 잘 사용하지 않는 형태의 숫자 자료형이다.
 
 <br><br><br>
 
