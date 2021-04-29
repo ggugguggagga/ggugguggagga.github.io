@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 파이썬 자료형(숫자형)[Python Number]
-image: python.png
+image: python.jpg
 date: 2021-04-30-01:53
 tags: [python, number]
 categories: python
@@ -41,7 +41,7 @@ categories: python
 
 <br>
 <Blockquote>실수형</Blockquote>
-파있너에서 실수형(Floating-point)은 소수점이 포함된 숫자를 말한다.
+파이썬에서 실수형(Floating-point)은 소수점이 포함된 숫자를 말한다.
 {% highlight python %}
 >>> num = 3.14
 >>> num = -3.14
@@ -87,7 +87,7 @@ e나 E로 표기해도 상관없다.
 <br>
 
 <Blockquote>**연산자</Blockquote>
-**연산자는 x**y처럼 사용하는데, x의 y제곱값을 반환한다.
+\*\*연산자는 x\*\*y처럼 사용하는데, x의 y제곱값을 반환한다.
 {% highlight python %}
 >>> a = 2
 >>> b = 3
