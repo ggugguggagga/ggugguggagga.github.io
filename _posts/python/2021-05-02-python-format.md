@@ -172,7 +172,7 @@ Of course, you can also make 10 digits as above.<br><br>
 {% endhighlight %}
 If you want to use brace characters like {} literally, not formatting characters, you can use {{ }} two consecutively like this.<br><br>
 
-<Blockquote>f 문자열 포매팅</Blockquote>
+<Blockquote>f string format</Blockquote>
 {% highlight python %}
 >>> number = 7
 >>> string = "seven"
