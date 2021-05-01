@@ -11,7 +11,222 @@ categories: python
 <summary>English</summary>
 <div markdown="1">
 
+Format
+=====
 
+If I wrote a program that tells today's date, if today's date is 2021-05-02, the following will be displayed.
+{% highlight python %}
+2021년 5월 2일
+
+//년 == year
+//월 == month
+//일 == day
+{% endhighlight %}
+Then, when tomorrow comes, it will be the 3rd, not the 2nd, and if the next month comes, it will be June instead of May, and the year will also be 2022. Here, there are cases where the values of the year, month, and day do not change, but only numbers need to be changed.<br>
+<br>
+Of course, in format, not only numbers are possible, but numbers, letters, and variables can be entered.
+
+
+|Code|Explanation|
+|:---:|:---:|
+|\s|String|
+|\c|Character|
+|\d|Integer|
+|\f|Floating-point|
+|\o|Octal|
+|\x|Hexadecimal|
+|%%|Literal %|
+{:.mbtablestyle}
+
+
+If you have using the c language, you will be familiar with some of the tables above.
+
+<Blockquote>Number</Blockquote>
+{% highlight python %}
+>>> "I like number %d" %7
+'I like number 7'
+{% endhighlight %}
+%d is an integer as shown in the table above.<br><br>
+
+<Blockquote>String</Blockquote>
+{% highlight python %}
+>>> "I like nuber %s" %"one"
+'I like nuber one'
+{% endhighlight %}
+%s can be assigned a string.<br><br>
+
+<Blockquote>Variable name</Blockquote>
+{% highlight python %}
+>>> number = 5
+>>> "I like number %d" %number
+'I like number 5'
+{% endhighlight %}
+It is also possible to specify a variable and put it in.<br><br>
+
+<Blockquote>2 values</Blockquote>
+{% highlight python %}
+>>> number = 7
+>>> string = "seven"
+>>> "I like number %d (%s)" %(number, string)
+'I like number 7 (seven)'
+{% endhighlight %}
+If you want to put two values, you can write the code using comma (,) as in the example above in turn.<br><br>
+
+<Blockquote>Alignment, blank</Blockquote>
+You can also use %d and %s as follows.
+{% highlight python %}
+>>> "%10s" %"Hello"
+'     Hello'
+{% endhighlight %}
+Since the above code creates 10 digits and puts 'Hello' at the end, you can right-justify 'Hello' on the right and leave the rest of the digits blank.<br><br>
+
+{% highlight python %}
+>>> "%-10sWorld" %"Hello"
+'Hello     World'
+{% endhighlight %}
+Then, in Python, minus can be used, so you can use minus when left aligning and 'Hello' to see left-aligned Hello. Also, if you put a word after %-10s, you first make 10 digits, then put 'Hello' and fill in the blanks, and then put 'World'. If you look at the code above, you can see that there are 10 digits before 'World'.<br><br>
+
+<Blockquote>decimal point</Blockquote>
+{% highlight python %}
+>>> "%0.5f" %3.14159265358979323846264338327950288
+'3.14159'
+{% endhighlight %}
+If you do not want to display all the decimal points and want to indicate to which digit, you can print to the desired digit by inserting.[the number of digits you want] and adding f for float.<br><br>
+
+<Blockquote>format</Blockquote>
+You can format as above, but there is a format function in Python, which allows you to format conveniently.<br>
+<br>
+
+**Number**
+{% highlight python %}
+>>> "I like number {0}" .format(7)
+'I like number 7'
+{% endhighlight %}
+<br>
+
+**String**
+{% highlight python %}
+>>> "I like number {0}" .format("one")
+'I like number one'
+{% endhighlight %}
+<br>
+
+**2 or more values**
+{% highlight python %}
+>>> number = 7
+>>> string = seven
+>>> "I like number {0} ({1})" .format(number, string)
+'I like number 7 (seven)'
+{% endhighlight %}
+If two or more values are entered, the values are entered sequentially by entering them in the order of {0} and {1}.<br><br>
+
+**Variable name**
+{% highlight python %}
+>>> "I like number {number} ({string})" .format(number = 7, string = "seven")
+'I like number 7 (seven)'
+{% endhighlight %}
+You can also set a value by setting a variable.<br><br>
+
+**Left align**
+{% highlight python %}
+>>> "{0:<10}".format("Hello")
+'Hello     '
+{% endhighlight %}
+The format function can also be left justified.<br><br>
+
+**Right aligned**
+{% highlight python %}
+>>> "{0:>10}".format("Hello")
+'     Hello'
+{% endhighlight %}
+If you use <for left alignment, and use> for right alignment, you can see that it is right-aligned.<br><br>
+
+**Fill in the blanks**
+{% highlight python %}
+>>> "{0:~^10}".format("Hello")
+'~~Hello~~~'
+>>> "{0:!<10}".format("Hello")
+'Hello!!!!!'
+{% endhighlight %}
+Spaces can be filled in by inserting the desired character before using one of <, >, and ^ and using alignment.<br><br>
+
+**Representing the decimal point**
+{% highlight python %}
+>>> radi = 3.14159265358979323846264338327950288
+>>> "{0:0.3f}".format(radi)
+'3.142'
+{% endhighlight %}
+As with the decimal point above, you can use f to print to the desired digit.<br><br>
+
+{% highlight python %}
+>>> radi = 3.14159265358979323846264338327950288
+>>> "{0:10.3f}".format(radi)
+'     3.142'
+{% endhighlight %}
+Of course, you can also make 10 digits as above.<br><br>
+
+**{ }**
+{% highlight python %}
+>>> "{{  }}".format()
+'{  }'
+{% endhighlight %}
+If you want to use brace characters like {} literally, not formatting characters, you can use {{ }} two consecutively like this.<br><br>
+
+<Blockquote>f 문자열 포매팅</Blockquote>
+{% highlight python %}
+>>> number = 7
+>>> string = "seven"
+>>> f"I like {number} ({string})"
+'I like 7 (seven)'
+{% endhighlight %}
+From Python 3.6 or higher, the f string format can be used. It cannot be used in versions below it. As above, you can use the string format function by prefixing the string with the f prefix. Anything after f can be either double quotes or single quotes.<br><br>
+
+{% highlight python %}
+>>> number = 7
+>>> f'I like number {number + 1}'
+'I like number 8'
+{% endhighlight %}
+It is also possible to output by adding values as above.<br><br>
+
+{% highlight python %}
+>>> d = {'string' : 'one', 'number' : 1}
+>>> f'I like {d["number"]} ({d["string"]})'
+'I like 1 (one)'
+{% endhighlight %}
+\[ \] is used as above in f string formatting.<br><br>
+
+{% highlight python %}
+>>> f'{"Hello":<10}'
+'Hello     '
+>>> f'{"Hello":>10}'
+'     Hello'
+>>> f'{"Hello":^10}'
+'  Hello   '
+>>> 
+{% endhighlight %}
+Alignment is used as above.<br><br>
+
+{% highlight python %}
+>>> f'{"Hello":-^10}'
+'--Hello---'
+>>> f'{"Hello":~<10}'
+'Hello~~~~~'
+{% endhighlight %}
+Spaces are also used as above.<br><br>
+
+{% highlight python %}
+>>> f'{radi:0.3f}'
+'3.142'
+>>> f'{radi:10.3f}'
+'     3.142'
+{% endhighlight %}
+Decimal points with decimal points and spaces are used as above.<br><br>
+
+{% highlight python %}
+>>> f'{{  }}'
+'{  }'
+{% endhighlight %}
+If you want to use {} characters, you can use both at the same time as above.
 
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
@@ -30,7 +245,7 @@ categories: python
 물론 포매팅에서도 숫자만 가능한것이 아니라 숫자, 문자, 변수를 넣는것이 가능하다.
 
 
-|Code|Explanation|
+|코드|설명|
 |:---:|:---:|
 |\s|문자열(String)|
 |\c|문자 1개(Character)|
