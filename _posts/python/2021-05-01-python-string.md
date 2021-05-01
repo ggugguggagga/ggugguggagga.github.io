@@ -221,3 +221,61 @@ Hello World
 >>> string[-1]
 'd'
 {% endhighlight %}
+'-0'이나 '0'은 같기때문데 'H'가 출력된다.
+{% highlight python %}
+>>> string = "Hello World
+>>> string[-0]
+'H'
+{% endhighlight %}
+<Blockquote>슬라이싱</Blockquote>
+"Hello World"에서 "Hello"만 뽑아낼 수 있는ㄷ, 여기서 두 가지 방법으로 나뉠 수 있다. 첫 번째는 아래와 같다.
+{% highlight python %}
+>>> string = "Hello World
+>>> word = string[0] + string[1] + string[2] + string[3] + string[4]
+>>> word
+'Hello'
+{% endhighlight %}
+이렇게 단순 더하기를 해서 뽑아낼 수 있지만 파이썬에서는 슬라이싱으로 간단하게 사용할 수 있다.
+{% highlight python %}
+>>> string = "Hello World"
+>>> string[0:5]
+'Hello'
+{% endhighlight %}
+string\[0:5\]는 string문자열, "Hello World"에서 0~5번째자리까지 문자를 뽑아낸다는 것을 의미한다. \[0:4\]까지만하면 될거같지만 파이썬에서는 string\[_시작 번호:끝 번호_\]를 지정할 때 끝 번호에 해당하는 것은 포함하지 않기 때문에 이점을 주의해야한다.<br>
+여기서 슬라이싱을 할 때 시작 번호가 꼭 0일 필요는 없다.
+{% highlight python %}
+>>> string = "Hello World"
+>>> string[3:8]
+'lo Wo'
+{% endhighlight %}
+만약 특정 구간에서 끝까지 출력하고 싶으면 string\[시작 번호:끝 번호\]에서 끝 번호를 생략하면 된다.
+{% highlight python %}
+>>> string = "Hello World"
+>>> string[3:]
+'lo World'
+{% endhighlight %}
+이와 똑같이 시작 번호를 생략하면 끝 번호까지 출력된다.
+{% highlight python %}
+>>> string = "Hello World">>> string[:8]
+'Hello Wo'
+{% endhighlight %}
+여기서 처음부터 끝까지 출력하고 싶으면 시작 번호와 끝 번호를 생략하면 된다.
+{% highlight python %}
+>>> string = "Hello World"
+>>> string[:]
+'Hello World'
+{% endhighlight %}
+슬라이싱에서도 인덱싱과 마찬가지로 마이너스를 사용할 수 있다.
+{% highlight python %}
+>>> string = "Hello World"
+>>> string[3:-3]
+'lo Wo'
+{% endhighlight %}
+
+----------
+
+포매팅
+=====
+
+<br>
+오늘 날짜를 알려주는 프로그램을 작성했다고 할 때 오늘 날짜가 2021년 5월 1일이라면 아래와 같이 출력할 것이다.
