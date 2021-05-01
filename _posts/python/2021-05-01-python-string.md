@@ -166,15 +166,15 @@ World
 <Blockquote>곱하기 응용</Blockquote>
 곱하기를 사용하기 좋은 경우는 구간을 나눠서 깔끔하게 보이도록 할 때 사용하면 좋다.
 {% highlight python %}
-print("-" * 30)
+print("~" * 30)
 print("Hello World")
-print("-" * 30)
+print("~" * 30)
 {% endhighlight %}
 
 위와같이 사용할 경우 아래와 같이 출력된다.
 {% highlight python %}
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Hello World
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {% end highlight %}
 
