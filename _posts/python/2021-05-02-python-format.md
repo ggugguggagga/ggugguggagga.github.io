@@ -49,12 +49,14 @@ c언어를 했다면 위의 표중 몇가지는 익숙할 것이다.
 >>> "I like number %d" %7
 'I like number 7'
 {% endhighlight %}
+<br>
 
 <Blockquote>문자열 대입</Blockquote>
 {% highlight python %}
 >>> "I like nuber %s" %"one"
 'I like nuber one'
 {% endhighlight %}
+<br>
 
 <Blockquote>변수 대입</Blockquote>
 {% highlight python %}
@@ -62,6 +64,7 @@ c언어를 했다면 위의 표중 몇가지는 익숙할 것이다.
 >>> "I like number %d" %number
 'I like number 5'
 {% endhighlight %}
+<br>
 
 <Blockquote>값 2개</Blockquote>
 {% highlight python %}
@@ -70,7 +73,7 @@ c언어를 했다면 위의 표중 몇가지는 익숙할 것이다.
 >>> "I like number %d (%s)" %(number, string)
 'I like number 7 (seven)'
 {% endhighlight %}
-만약 값을 두개 넣고 싶다면 차례로 위의 예제처럼 콤마(,)를 이용해서 코드를 작성하면된다.
+만약 값을 두개 넣고 싶다면 차례로 위의 예제처럼 콤마(,)를 이용해서 코드를 작성하면된다.<br>
 
 <Blockquote>정렬, 공백</Blockquote>
 %d와 %s을 이용해서 아래와 같이 사용할 수도있다.
@@ -78,20 +81,20 @@ c언어를 했다면 위의 표중 몇가지는 익숙할 것이다.
 >>> "%10s" %"Hello"
 '     Hello'
 {% endhighlight %}
-위의 코드는 일단 10개의 자리를 만들고 뒤에 Hello를 넣는것이기 때문에 오른쪽에 Hello를 오른쪽 정렬한 뒤 나머지 자리를 공백으로 남겨둘 수 있다.
+위의 코드는 일단 10개의 자리를 만들고 뒤에 Hello를 넣는것이기 때문에 오른쪽에 Hello를 오른쪽 정렬한 뒤 나머지 자리를 공백으로 남겨둘 수 있다.<br>
 
 {% highlight python %}
 >>> "%-10sWorld" %"Hello"
 'Hello     World'
 {% endhighlight %}
-그럼 파이썬에서는 마이너스를 사용할 수 있으니 왼쪽정렬을 할때는 마이너스를 사용하고 Hello를 하면 왼쪽 정렬된 Hello를 볼 수 있다. 또한 %-10s뒤에 단어를 넣으면 일단 10개의 자리를 만들고나서 Hello를 넣고 공백을 채운후 World를 넣게 된다. 위 코드를 보면 World앞까지 10개의 자리가 있는 것을 확인할 수 있다.
+그럼 파이썬에서는 마이너스를 사용할 수 있으니 왼쪽정렬을 할때는 마이너스를 사용하고 Hello를 하면 왼쪽 정렬된 Hello를 볼 수 있다. 또한 %-10s뒤에 단어를 넣으면 일단 10개의 자리를 만들고나서 Hello를 넣고 공백을 채운후 World를 넣게 된다. 위 코드를 보면 World앞까지 10개의 자리가 있는 것을 확인할 수 있다.<br>
 
 <Blockquote>소수점</Blockquote>
 {% highlight python %}
 >>> "%0.5f" %3.14159265358979323846264338327950288
 '3.14159'
 {% endhighlight %}
-소수점을 전부 표시하고 싶지않고 어느 자리까지 표기하고 싶다면 .[원하는 자릿수]를 넣고 float를 뜻하는 f를 붙이면 원하는 자리까지 출력할 수 있다.
+소수점을 전부 표시하고 싶지않고 어느 자리까지 표기하고 싶다면 .[원하는 자릿수]를 넣고 float를 뜻하는 f를 붙이면 원하는 자리까지 출력할 수 있다.<br>
 
 <Blockquote>format</Blockquote>
 위와같이 포매팅을 할 수 있지만 파이썬에는 format 함수가 있는데 이를 사용하면 편하게 포매팅을 할 수 있다.<br>
@@ -101,13 +104,15 @@ c언어를 했다면 위의 표중 몇가지는 익숙할 것이다.
 {% highlight python %}
 >>> "I like number {0}" .format(7)
 'I like number 7'
-{% endhighlight %}<br>
+{% endhighlight %}
+<br>
 
 **문자열**
 {% highlight python %}
 >>> "I like number {0}" .format("one")
 'I like number one'
-{% endhighlight %}<br>
+{% endhighlight %}
+<br>
 
 **2개 이상의 값**
 {% highlight python %}
