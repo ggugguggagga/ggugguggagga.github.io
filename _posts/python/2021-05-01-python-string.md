@@ -168,6 +168,7 @@ print("-" * 30)
 print("Hello World")
 print("-" * 30)
 {% endhighlight %}
+
 위와같이 사용할 경우 아래와 같이 출력된다.
 {% highlight python %}
 ------------------------------
@@ -181,7 +182,8 @@ Hello World
 >>> string = "Hello World"
 >>> len(string)
 11
-{% endhighlight %}<br>
+{% endhighlight %}
+<br>
 
 -----------------------------
 
@@ -197,7 +199,10 @@ Hello World
 위 문자열에 번호를 매기면 아래와 같다.
 
 
-
+|H|e|l|l|o||W|o|r|l|d|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|0|1|2|3|4|5|6|7|8|9|10|
+{:.mbtablestyle}
 
 
 파이썬은 0부터 숫자를 센다.
