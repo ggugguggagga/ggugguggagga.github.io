@@ -21,38 +21,25 @@ categories: python
 문자열
 =====
 <br>
-문자열(String)이란 문자나 단어등으로 구성된 문자들의 집합을 의미한다.
+문자열은 말그대로 문자들을 말하는 것이다. 간단하게 "안녕하세요", "Hello"와 같은 단어도 되고, "A", "B"와 같은 한 개의 문자나 아니면 숫자도 문자열이라고 한다.
 {% highlight python %}
 "Hello World"
 "A"
 "365"
 {% endhighlight %}
-위와 같은 예시를 보면 큰따옴표(")를 사용해서 문자열을 만들 수 있지만 파이썬에서 문자열을 사용하는 방법은 총 4가지이다.<br><br><br>
+위의 예제 코드를 보면 큰따옴표(")로 문자열을 표시한것을 볼 수 있지만 파이썬에서는 표현할 수 있는 방법이 총 4가지가 된다.<br><br><br>
 
-
-<Blockquote>큰 따옴표(")</Blockquote>
+대표적으로 우리가 알고있는 큰 따옴표(")와 작은 따옴표(')가 있지만 큰 따옴표(""")를 사용하거나 작은 따옴표(''')를 연속으로 세 번씩 적어서 사용할 수 있다. 하지만 보통 그냥 큰 따옴표(")나 작은 따옴표(')를 쓰는게 일반적이다.
 {% highlight python %}
 "Hello World"
-{% endhighlight %}
-
-<Blockquote>작은 따옴표(')</Blockquote>
-{% highlight python %}
 'Hello World'
-{% endhighlight %}
-
-<Blockquote>큰따옴표 3개(""")</Blockquote>
-{% highlight python %}
 """Hello World"""
-{% endhighlight %}
-
-<Blockquote>작은따옴표 3개(''')</Blockquote>
-{% highlight python %}
 '''Hello World'''
 {% endhighlight %}
-<br>
 
 -----
 
+만약 문자열 안에 작은 따옴표나 큰 따옴표를 넣고싶다면 세 가지 방법을 사용할 수 있다.
 <br>
 <Blockquote>작은따옴표 사용하기</Blockquote>
 {% highlight python %}
@@ -60,38 +47,40 @@ categories: python
 >>> string
 "I'm programmer"
 {% endhighlight %}
-위와같이 문자열을 큰 따옴표(")에 둘러싸이게하면 큰 따옴표 안에 들어있는 작은 따옴표는 기호로 인식되지 않기때문에 일반 문자처럼 사용할 수 있다.<br>
-<br>
-여기서 만약 큰 따옴표(")가 아닌 작은 따옴표(')를 사용한다면 SyntaxError가 발생한다.
-{% highlight python %}
->>> string = 'I'm programmer'
-SyntaxError: invalid syntax
-{% endhighlight %}
+작은 따옴표를 사용하고 싶다면 사용할 문자열을 큰 따옴표로 감싸면 된다. 이렇게 사용하면 큰 따옴표 안에 있는 작은 따옴표는 그냥 문자로 인식하기 때문에 그냥 사용할 수 있다.
 <Blockquote>큰따옴표 사용하기</Blockquote>
 {% highlight python %}
 >>> string = '"Hello" I say'
 >>> string
 '"Hello" I say'
 {% endhighlight %}
-위와같이 작은 따옴표(')를 사용하면 큰 따옴표(")를 일반 문자처럼 사용할 수 있다. 즉, 작은따옴표(')안에 사용된 큰 따옴표는(")문자열을 만드는 기호로 인식되지않는다.
+큰 따옴표를 사용하고 싶으면 위와 반대로 작은 따옴표로 문자열을 감싸면 큰 따옴표를 문자로 인식하기때문에 큰 따옴표를 사용할 수 있다.
+{% highlight python %}
+>>> string = 'I'm programmer'
+SyntaxError: invalid syntax
+{% endhighlight %}
+여기서 주의할 점은 예를 들어 작은 따옴표로 감싼곳안에 작은 따옴표를 넣으면 이는 SyntaxError이므로 주의해야한다.
+{% highlight python %}
+>>> "I"m programmer"
+SyntaxError: invalid syntax
+{% endhighlight %}
+위에 큰 따옴표는 문법적으로 말이 안되지만 예시를 보여주기위해 사용한 것으로 큰 따옴표 또한 큰 따옴표에 감싸져있을 때 사용하면 SyntaxError가 발생하므로 주의해야한다.
 <Blockquote>백슬래시(\\)</Blockquote>
 {% highlight python %}
 >>> intro = 'I\'m programmer'
 >>> string = "\"Hello\" I say"
 {% endhighlight %}
-위와같이 백슬래시(\\)를 사용하면 백슬래쉬 뒤에오는 문자는 기호의 의미가 아니라 문자 자체를 사용하게된다.
-<br>
+보통 마크다운이나 HTML에서 사용하거나 C언어, c++에서 사용하는 방법이다. 바로 백슬래시를 사용하는 것이다. 그렇다면 큰 따옴표에 감싸져있거나 작은 따옴표에 감싸져있다해도 우리가 사용하고 싶은 문자를 사용할 수 있다. 위의 예제를 보면 이해가 쉽게 될 것이다.
 
 ------
 
-<br>
-여러 줄로 나뉜 문자열을 변수에 대입하고 싶을 때는 크게 두 가지 방법이 있다.<br><br>
+﻿문자열을 사용하다보면 줄을 띄우고 싶을 때가 있는데 이는 총 3가지 방법이 있다.<br><br>
 
 <Blockquote>\\n</Blockquote>
 {% highlight python %}
 >>> string = "Hello\n World"
 {% endhighlight %}
-위와같이 줄바꿈 문자인 '\\n'을 사용하는 방법이 있지만 한눈에 알아보기 힘들고 줄이 길어지는 단점이 있다.
+이렇게 c나 c++에서도 사용되는 \n를 사용해서 줄의 띄울 수 있다. 하지만 가독성이 떨어지고 길어지는 단점을 가지고있다.
 
 <Blockquote>작은따옴표 3개('''), 큰따옴표 3개(""")</Blockquote>
 {% highlight python %}
@@ -109,13 +98,11 @@ World"""
 Hello
 World
 {% endhighlight %}
-위와같이 문자열이 길고 여러줄인 경우는 '\\n'보다는 위와같은 방법을 사용하는 것이 좋다.
+위에서 문자를 나탈 때 사용하던 큰 따옴표(""") 3개와 작은 따옴표(''') 3개를 사용하면 줄을 띄울 때 편리하게 사용할 수 있다. 먼저 작은 따옴표나 큰 따옴표를 3개사용하고 적고싶은 말을 적고나서 띄우고 싶으면 엔터를 쳐서 띄우고 변수에 넣어서 확인하면 잘 띄어져있는 것을 확인할 수 있다.
 
-<br>
 
 ----------
 
-<br>
 
 이스케이프 코드
 =====
@@ -135,147 +122,3 @@ World
 |\000|널 문자|
 {:.mbtablestyle}
 
-<br>
-
---------------------
-
-<br>
-
-문자열 연산
-=====
-
-<br>
-파이썬에서는 문자열을 더하거나 곱할 수 있다. 문자열을 더하는건 연결하는 역할을 하고, 곱하기는 곱한 수만큼 그 문자열이 나오게 할 수 있다.
-<br>
-<Blockquote>더하기</Blockquote>
-{% highlight python %}
->>> first = "Hello"
->>> second = " World"
->>> first + second
-'Hello World'
-{% endhighlight %}
-위의 코드는 보이는 그대로 first다음에 second를 붙인 것이다.
-
-<Blockquote>곱하기</Blockquote>
-{% highlight python %}
->>> string = "Hello"
->>> string * 2
-'HelloHello'
-{% endhighlight %}
-
-<Blockquote>곱하기 응용</Blockquote>
-곱하기를 사용하기 좋은 경우는 구간을 나눠서 깔끔하게 보이도록 할 때 사용하면 좋다.
-{% highlight python %}
-print("-" * 30)
-print("Hello World")
-print("-" * 30)
-{% endhighlight %}
-
-위와같이 사용할 경우 아래와 같이 출력된다.
-{% highlight python %}
-------------------------------
-Hello World
-------------------------------
-{% endhighlight %}
-
-<Blockquote>문자열 길이 구하기</Blockquote>
-파이썬에서 len 함수를 사용하면 문자열의 길이를 알 수 있다.
-{% highlight python %}
->>> string = "Hello World"
->>> len(string)
-11
-{% endhighlight %}
-<br>
-
------------------------------
-
-<br>
-
-문자열 인덱싱과 슬라이싱
-=====
-
-<Blockquote>인덱싱</Blockquote>
-{% highlight python %}
->>> string = "Hello World"
-{% endhighlight %}
-위 문자열에 번호를 매기면 아래와 같다.
-
-
-| H | e | l | l | o |   | W | o | r | l | d |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-{:.mbtablestyle}
-
-
-파이썬은 0부터 숫자를 센다.
-{% highlight python %}
->>> string = "Hello World"
->>> string[4]
-'o'
-{% endhighlight %}
-4번째 자리는 'o'이기 때문에 'o'가 출력된다. 이렇듯 string\[_번호_\]는 문자열 안에 특정 값을 출력하는 역할을 하는데 이를 인덱싱이라고 한다.<br>
-<br>
-파이썬은 인덱스에 마이너스(-)값을 넣어도 출력된다. 아래의 예제를 보면 괄호안에 '-1'를 넣으면 'd'가 출력되는 것을 볼 수 있는데 이는 뒤에서부터 세어 첫 번째인 문자를 가르키기 때문에 'd'가 출력된다.
-{% highlight python %}
->>> string = "Hello World
->>> string[-1]
-'d'
-{% endhighlight %}
-'-0'이나 '0'은 같기때문데 'H'가 출력된다.
-{% highlight python %}
->>> string = "Hello World
->>> string[-0]
-'H'
-{% endhighlight %}
-<Blockquote>슬라이싱</Blockquote>
-"Hello World"에서 "Hello"만 뽑아낼 수 있는ㄷ, 여기서 두 가지 방법으로 나뉠 수 있다. 첫 번째는 아래와 같다.
-{% highlight python %}
->>> string = "Hello World
->>> word = string[0] + string[1] + string[2] + string[3] + string[4]
->>> word
-'Hello'
-{% endhighlight %}
-이렇게 단순 더하기를 해서 뽑아낼 수 있지만 파이썬에서는 슬라이싱으로 간단하게 사용할 수 있다.
-{% highlight python %}
->>> string = "Hello World"
->>> string[0:5]
-'Hello'
-{% endhighlight %}
-string\[0:5\]는 string문자열, "Hello World"에서 0~5번째자리까지 문자를 뽑아낸다는 것을 의미한다. \[0:4\]까지만하면 될거같지만 파이썬에서는 string\[_시작 번호:끝 번호_\]를 지정할 때 끝 번호에 해당하는 것은 포함하지 않기 때문에 이점을 주의해야한다.<br>
-여기서 슬라이싱을 할 때 시작 번호가 꼭 0일 필요는 없다.
-{% highlight python %}
->>> string = "Hello World"
->>> string[3:8]
-'lo Wo'
-{% endhighlight %}
-만약 특정 구간에서 끝까지 출력하고 싶으면 string\[시작 번호:끝 번호\]에서 끝 번호를 생략하면 된다.
-{% highlight python %}
->>> string = "Hello World"
->>> string[3:]
-'lo World'
-{% endhighlight %}
-이와 똑같이 시작 번호를 생략하면 끝 번호까지 출력된다.
-{% highlight python %}
->>> string = "Hello World">>> string[:8]
-'Hello Wo'
-{% endhighlight %}
-여기서 처음부터 끝까지 출력하고 싶으면 시작 번호와 끝 번호를 생략하면 된다.
-{% highlight python %}
->>> string = "Hello World"
->>> string[:]
-'Hello World'
-{% endhighlight %}
-슬라이싱에서도 인덱싱과 마찬가지로 마이너스를 사용할 수 있다.
-{% highlight python %}
->>> string = "Hello World"
->>> string[3:-3]
-'lo Wo'
-{% endhighlight %}
-
-----------
-
-포매팅
-=====
-
-<br>
-오늘 날짜를 알려주는 프로그램을 작성했다고 할 때 오늘 날짜가 2021년 5월 1일이라면 아래와 같이 출력할 것이다.
