@@ -11,7 +11,127 @@ categories: python
 <summary>English</summary>
 <div markdown="1">
 
+String function
+=====
 
+The string data type has its own function. To use it, add '.' after the string variable and use the name of the function to be used.<br>
+<br>
+
+<Blockquote>Counting the number of characters(count)</Blockquote>
+{% highlight python %}
+>>> string = "Hello"
+>>> string.count("l")
+2
+{% endhighlight %}
+The count in the example above returns the number of characters 'l' to find.<br><br>
+
+<Blockquote>Print the location(find)</Blockquote>
+{% highlight python %}
+>>> string = "Hello World"
+>>> string.find('r')
+8
+>>> string.find('a')
+-1
+{% endhighlight %}
+In the above example, if 'r' is found, the position of the first occurrence of 'r' is returned. However, if a missing character is entered, -1 is returned.<br><br>
+
+<Blockquote>Print the location(index)</Blockquote>
+{% highlight python %}
+>>> string = "Hello World"
+>>> string.index('W')
+6
+>>> string.index('w')
+Traceback (most recent call last):
+  File "<pyshell#18>", line 1, in <module>
+    string.index('w')
+ValueError: substring not found
+{% endhighlight %}
+The example index above returns the position of the first character, like find. However, if you enter a missing character, an error occurs.<br><br>
+
+
+<Blockquote>Insert string(join)</Blockquote>
+{% highlight python %}
+>>> ",".join("1234")
+'1,2,3,4'
+{% endhighlight %}
+The join function inserts a ',' between each of the 1234 strings. The join function can use not only strings but also lists and tuples as input.<br>
+How to use it as a list is as follows.
+
+{% highlight python %}
+>>> ",".join(['1','2','3','4'])
+'1,2,3,4'
+{% endhighlight %}
+<br>
+
+<Blockquote>Change lowercase to uppercase(upper)</Blockquote>
+{% highlight python %}
+>>> string = "hello"
+>>> string.upper()
+'HELLO'
+{% endhighlight %}
+It literally converts lowercase letters to uppercase letters. However, if it is already in capital letters, there is no change.<br><br>
+
+<Blockquote>Change uppercase to lowercase(lower)</Blockquote>
+{% highlight python %}
+>>> string = "HELLO"
+>>> string.lower()
+'hello'
+{% endhighlight %}
+This also literally converts uppercase letters to lowercase letters. But if it's already in lowercase, nothing changes.<br><br>
+
+<Blockquote>Erase left space(lstrip)</Blockquote>
+{% highlight python %}
+>>> string = "    Hello    "
+>>> string.lstrip()
+'Hello    '
+{% endhighlight %}
+lstrip is a function that removes one or more consecutive whitespaces from the leftmost of a string. In lstrip, 'l' means left.<br><br>
+
+<Blockquote>Erase right space(rstrip)</Blockquote>
+{% highlight python %}
+>>> string = "    Hello    "
+>>> string.rstrip()
+'    Hello'
+{% endhighlight %}
+rstrip is a function that removes one or more consecutive spaces from the rightmost space of a string. In rstrip, 'r' means right.<br><br>
+
+<Blockquote>Erase both spaces(strip)</Blockquote>
+{% highlight python %}
+>>> string.strip()
+'Hello'
+{% endhighlight %}
+strip is a function that removes all spaces from one or more consecutive spaces on either side of a string.<br><br>
+
+<Blockquote>Replace string(replace)</Blockquote>
+{% highlight python %}
+>>> string = "Hello World"
+>>> string.replace("World", "People")
+'Hello People'
+{% endhighlight %}
+This function is used like replace (the string to be replaced, the string to replace) to replace a specific value in a string with another value.<br><br>
+
+<Blockquote>Splitting a string(split)</Blockquote>
+{% highlight python %}
+>>> string = "I like number 7"
+>>> string.split()
+['I', 'like', 'number', '7']
+{% endhighlight %}
+As above, if nothing is put in the parentheses of the split, the string is divided based on space (space, tab, enter, etc.).
+
+{% highlight python %}
+>>> number = "1:2:3:4"
+>>> number.split(':')
+['1', '2', '3', '4']
+{% endhighlight %}
+However, if a specific character is put in parentheses as above, it is divided based on the specific character.<br><br>
+
+<Blockquote>Finding the length of a string(len)</Blockquote>
+{% highlight python %}
+>>> string = "Hello World"
+>>> len(string)
+11
+{% endhighlight %}
+If you put the variable name in parentheses, it tells you the length of the string.
 
 
 
@@ -32,7 +152,7 @@ categories: python
 >>> string.count("l")
 2
 {% endhighlight %}
-count는 찾고자 하는 문자 'l'의 개수를 반환해준다.<br><br>
+위의 예제 count는 찾고자 하는 문자 'l'의 개수를 반환해준다.<br><br>
 
 <Blockquote>위치 알려주기(find)</Blockquote>
 {% highlight python %}
@@ -42,7 +162,7 @@ count는 찾고자 하는 문자 'l'의 개수를 반환해준다.<br><br>
 >>> string.find('a')
 -1
 {% endhighlight %}
-'r'을 찾으면 'r'이 처음나온 위치를 반환해준다. 하지만 없는 문자를 넣는다면 -1을 반환해준다.<br><br>
+위의 예제 find는 'r'을 찾으면 'r'이 처음나온 위치를 반환해준다. 하지만 없는 문자를 넣는다면 -1을 반환해준다.<br><br>
 
 <Blockquote>위치 알려주기(index)</Blockquote>
 {% highlight python %}
@@ -55,7 +175,7 @@ Traceback (most recent call last):
     string.index('w')
 ValueError: substring not found
 {% endhighlight %}
-index는 find와 같이 처음나온 문자의 위치를 반환해준다. 하지만 없는 문자를 넣으면 오류가 발생한다.<br><br>
+위의 예제 index는 find와 같이 처음나온 문자의 위치를 반환해준다. 하지만 없는 문자를 넣으면 오류가 발생한다.<br><br>
 
 
 <Blockquote>문자열 삽입(join)</Blockquote>
@@ -63,7 +183,7 @@ index는 find와 같이 처음나온 문자의 위치를 반환해준다. 하지
 >>> ",".join("1234")
 '1,2,3,4'
 {% endhighlight %}
-join함수는 1234문자열의 각각의 사이에 ','를 삽입한다. join함수는 문자열뿐만 아니라 리스트나 튜플도 입력으로 사용할 수 있다.<br>
+위의 예제 join함수는 1234문자열의 각각의 사이에 ','를 삽입한다. join함수는 문자열뿐만 아니라 리스트나 튜플도 입력으로 사용할 수 있다.<br>
 리스트로 사용하는 방법은 아래와 같다.
 
 {% highlight python %}
@@ -125,7 +245,7 @@ replace(바뀌게 될 문자열, 바꿀 문자열)처럼 사용해 문자열 안
 >>> string.split()
 ['I', 'like', 'number', '7']
 {% endhighlight %}
-위와같이 spllit의 괄호안에 아무것도 넣지않으면 공백(스페이스, 탭, 엔터 등)을 기준으로 문자열을 나누어준다.
+위와같이 split의 괄호안에 아무것도 넣지않으면 공백(스페이스, 탭, 엔터 등)을 기준으로 문자열을 나누어준다.
 
 {% highlight python %}
 >>> number = "1:2:3:4"
