@@ -170,20 +170,3 @@ print("-" * 30)
 print("Hello World")
 print("-" * 30)
 {% endhighlight %}
-
-위와같이 사용할 경우 아래와 같이 출력된다.
-{% highlight python %}
-------------------------------
-Hello World
-------------------------------
-{% end highlight %}
-
-<Blockquote>문자열 길이 구하기</Blockquote>
-파이썬에서 len 함수를 사용하면 문자열의 길이를 알 수 있다.
-{% highlight python %}
->>> string = "Hello World"
->>> len(string)
-11
-{% endhighlight %}
-<br>
-
