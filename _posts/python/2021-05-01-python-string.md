@@ -11,9 +11,115 @@ categories: python
 <summary>English</summary>
 <div markdown="1">
 
+String
+=====
+<br>
+Strings literally refer to characters. It can be a simple word like "Hello", a single letter like "A", "B", or a number is also called a string.
+{% highlight python %}
+"Hello World"
+"A"
+"365"
+{% endhighlight %}
+If you look at the example code above, you can see that the string is marked with double quotation marks ("), but in Python, there are a total of 4 ways to express it.<br><br><br>
+
+Typically, there are double quotation marks (") and single quotation marks (') as we know them, but you can use double quotation marks (""") or single quotation marks (''') three times in a row. However, it is common to just use double quotes (") or single quotes (').
+{% highlight python %}
+"Hello World"
+'Hello World'
+"""Hello World"""
+'''Hello World'''
+{% endhighlight %}
+
+-----
+
+If you want to put single or double quotes inside a string, you can use three methods.
+<br>
+<Blockquote>Using single quotes</Blockquote>
+{% highlight python %}
+>>> string = "I'm programmer"
+>>> string
+"I'm programmer"
+{% endhighlight %}
+If you want to use single quotes, just enclose the string to be used in double quotes. In this way, single quotes inside double quotes are recognized as characters, so you can just use them.
+<Blockquote>Using double quotes</Blockquote>
+{% highlight python %}
+>>> string = '"Hello" I say'
+>>> string
+'"Hello" I say'
+{% endhighlight %}
+Contrary to the above, if you wrap a string with single quotation marks, double quotation marks can be used because double quotation marks are recognized as characters.
+{% highlight python %}
+>>> string = 'I'm programmer'
+SyntaxError: invalid syntax
+{% endhighlight %}
+Note that, for example, if you put single quotes inside single quotes, it is a SyntaxError, so be careful.
+{% highlight python %}
+>>> "I"m programmer"
+SyntaxError: invalid syntax
+{% endhighlight %}
+The double quotes above are grammatically nonsense, but they are used to show examples. If you use double quotes when they are enclosed in double-quotes, a SyntaxError will occur, so be careful.
+<Blockquote>백슬래시(\\)</Blockquote>
+{% highlight python %}
+>>> intro = 'I\'m programmer'
+>>> string = "\"Hello\" I say"
+{% endhighlight %}
+It is usually used in Markdown or HTML, or in C or C++. That's the backslash. If so, you can use the character we want to use even if it is enclosed in double or single quotes. It will be easier to understand by looking at the example above.
+
+------
+
+When using strings, there are times when you want to change paragraphs, and there are a total of three ways to do this.<br><br>
+
+<Blockquote>\n</Blockquote>
+{% highlight python %}
+>>> string = "Hello\n World"
+{% endhighlight %}
+Like this, you can use \n, which is also used in c or c++, to space lines. However, it has the disadvantage of poor readability and lengthening.
+
+<Blockquote>3 single quotes('''), 3 double quotation marks(""")</Blockquote>
+{% highlight python %}
+>>> string = '''Hello
+World'''
+>>> print(string)
+Hello
+World
+{% endhighlight %}
+
+{% highlight python %}
+>>> string = """Hello
+World"""
+>>> print(string)
+Hello
+World
+{% endhighlight %}
+If you use the 3 double quotation marks (""") and 3 single quotation marks ("') used to represent the character above, you can conveniently use it when changing paragraphs. First, use 3 single or double quotation marks and write them down. If you want to change the paragraph after writing down the words you want to change, press Enter and confirm. You can see that the paragraph has changed.
+
+
+----------
+
+
+Escape code
+=====
+<br>
+
+|Code|Explanation|
+|:---:|:---:|
+|\n|When changing a line in a string|
+|\t|When giving tab space between strings|
+|\\\\ |When printing the character \\ |
+|\\\'|When printing single quotation marks (')|
+|\\\"|When printing double quotation marks (")|
+|\r|Carriage return (line feed character, moves the current cursor to the front)|
+|\f|Form Pit (newline character, moves the current cursor to the next line)|
+|\a|Bell sound (the PC speaker makes a "beep" sound when output)|
+|\b|Backspace|
+|\000|Null character|
+{:.mbtablestyle}
+
+
+
 
 -----------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 </div>
 </details>
 <br>
@@ -74,9 +180,9 @@ SyntaxError: invalid syntax
 
 ------
 
-﻿문자열을 사용하다보면 줄을 띄우고 싶을 때가 있는데 이는 총 3가지 방법이 있다.<br><br>
+문자열을 사용하다보면 줄을 띄우고 싶을 때가 있는데 이는 총 3가지 방법이 있다.<br><br>
 
-<Blockquote>\\n</Blockquote>
+<Blockquote>\n</Blockquote>
 {% highlight python %}
 >>> string = "Hello\n World"
 {% endhighlight %}
