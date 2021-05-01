@@ -77,7 +77,8 @@ SyntaxError: invalid syntax
 >>> intro = 'I\'m programmer'
 >>> string = "\"Hello\" I say"
 {% endhighlight %}
-위와같이 백슬래시(\\)를 사용하면 백슬래쉬 뒤에오는 문자는 기호의 의미가 아니라 문자 자체를 사용하게된다.<br>
+위와같이 백슬래시(\\)를 사용하면 백슬래쉬 뒤에오는 문자는 기호의 의미가 아니라 문자 자체를 사용하게된다.
+<br>
 ------
 <br>
 여러 줄로 나뉜 문자열을 변수에 대입하고 싶을 때는 크게 두 가지 방법이 있다.<br><br>
@@ -138,3 +139,17 @@ World
 파이썬에서는 문자열을 더하거나 곱할 수 있다. 문자열을 더하는건 연결하는 역할을 하고, 곱하기는 곱한 수만큼 그 문자열이 나오게 할 수 있다.
 <br>
 <Blockquote>더하기</Blockquote>
+{% highlight python %}
+>>> first = "Hello"
+>>> second = " World"
+>>> first + second
+'Hello World'
+{% endhighlight %}
+위의 코드는 보이는 그대로 first다음에 second를 붙인 것이다.
+
+<Blockquote>곱하기</Blockquote>
+{% highlight python %}
+>>> string = "Hello"
+>>> string * 2
+'HelloHello'
+{% endhighlight %}
