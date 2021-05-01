@@ -49,22 +49,22 @@ c언어를 했다면 위의 표중 몇가지는 익숙할 것이다.
 >>> "I like number %d" %7
 'I like number 7'
 {% endhighlight %}
-<br><br>
+%d는 위에 표에서 본 것과 같이 정수를 넣을 수 있다.<br><br>
 
 <Blockquote>문자열 대입</Blockquote>
 {% highlight python %}
 >>> "I like nuber %s" %"one"
 'I like nuber one'
 {% endhighlight %}
-<br><br>
+%s는 문자열을 대입할 수 있다.<br><br>
 
-<Blockquote>변수 대입</Blockquote>
+<Blockquote>변수명</Blockquote>
 {% highlight python %}
 >>> number = 5
 >>> "I like number %d" %number
 'I like number 5'
 {% endhighlight %}
-<br><br>
+변수를 지정해서 넣는 것도 가능하다.<br><br>
 
 <Blockquote>값 2개</Blockquote>
 {% highlight python %}
