@@ -166,15 +166,50 @@ World
 <Blockquote>곱하기 응용</Blockquote>
 곱하기를 사용하기 좋은 경우는 구간을 나눠서 깔끔하게 보이도록 할 때 사용하면 좋다.
 {% highlight python %}
-print("." * 30)
+print("-" * 30)
 print("Hello World")
-print("." * 30)
+print("-" * 30)
 {% endhighlight %}
 
 위와같이 사용할 경우 아래와 같이 출력된다.
 {% highlight python %}
-..............................
+------------------------------
 Hello World
-..............................
-{% end highlight %}
+------------------------------
+{% endhighlight %}
 
+<Blockquote>문자열 길이 구하기</Blockquote>
+파이썬에서 len 함수를 사용하면 문자열의 길이를 알 수 있다.
+{% highlight python %}
+>>> string = "Hello World"
+>>> len(string)
+11
+{% endhighlight %}
+<br>
+
+-----------------------------
+
+<br>
+
+문자열 인덱싱과 슬라이싱
+=====
+
+<Blockquote>인덱싱</Blockquote>
+{% highlight python %}
+>>> string = "Hello World"
+{% endhighlight %}
+위 문자열에 번호를 매기면 아래와 같다.
+
+
+|H|e|l|l|o||W|o|r|l|d|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|0|1|2|3|4|5|6|7|8|9|10|
+{:.mbtablestyle}
+
+
+파이썬은 0부터 숫자를 센다.
+{% highlight python %}
+>>> string = "Hello World"
+>>> string[4]
+'o'
+{% endhighlight %}
