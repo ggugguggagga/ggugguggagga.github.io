@@ -170,3 +170,11 @@ print("-" * 30)
 print("Hello World")
 print("-" * 30)
 {% endhighlight %}
+
+위와같이 사용할 경우 아래와 같이 출력된다.
+{% highlight python %}
+------------------------------
+Hello World
+------------------------------
+{% end highlight %}
+
