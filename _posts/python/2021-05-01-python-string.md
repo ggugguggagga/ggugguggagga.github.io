@@ -58,7 +58,7 @@ Note that, for example, if you put single quotes inside single quotes, it is a S
 SyntaxError: invalid syntax
 {% endhighlight %}
 The double quotes above are grammatically nonsense, but they are used to show examples. If you use double quotes when they are enclosed in double-quotes, a SyntaxError will occur, so be careful.
-<Blockquote>백슬래시(\\)</Blockquote>
+<Blockquote>Backslash (\\)</Blockquote>
 {% highlight python %}
 >>> intro = 'I\'m programmer'
 >>> string = "\"Hello\" I say"
