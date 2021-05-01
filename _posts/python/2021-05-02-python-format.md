@@ -101,13 +101,13 @@ c언어를 했다면 위의 표중 몇가지는 익숙할 것이다.
 {% highlight python %}
 >>> "I like number {0}" .format(7)
 'I like number 7'
-{% endhighlight %}
+{% endhighlight %}<br>
 
 **문자열**
 {% highlight python %}
 >>> "I like number {0}" .format("one")
 'I like number one'
-{% endhighlight %}
+{% endhighlight %}<br>
 
 **2개 이상의 값**
 {% highlight python %}
@@ -116,28 +116,28 @@ c언어를 했다면 위의 표중 몇가지는 익숙할 것이다.
 >>> "I like number {0} ({1})" .format(number, string)
 'I like number 7 (seven)'
 {% endhighlight %}
-2개 이상의 값을 넣을 경우는 {0}, {1}과 같이 순서대로 넣으면 값이 차례로 들어간다.
+2개 이상의 값을 넣을 경우는 {0}, {1}과 같이 순서대로 넣으면 값이 차례로 들어간다.<br>
 
 **변수명**
 {% highlight python %}
 >>> "I like number {number} ({string})" .format(number = 7, string = "seven")
 'I like number 7 (seven)'
 {% endhighlight %}
-변수를 정해서 값을 정해줄 수도있다
+변수를 정해서 값을 정해줄 수도있다<br>
 
 **왼쪽 정렬**
 {% highlight python %}
 >>> "{0:<10}".format("Hello")
 'Hello     '
 {% endhighlight %}
-format함수 또한 왼쪽정렬이 가능하다.
+format함수 또한 왼쪽정렬이 가능하다.<br>
 
 **오른쪽 정렬**
 {% highlight python %}
 >>> "{0:>10}".format("Hello")
 '     Hello'
 {% endhighlight %}
-왼쪽정렬에서는 <를 썼다면 오른쪽 정렬은 >를 사용하면 오른쪽 정렬된것을 확인할 수 있다.
+왼쪽정렬에서는 <를 썼다면 오른쪽 정렬은 >를 사용하면 오른쪽 정렬된것을 확인할 수 있다.<br>
 
 **공백 채우기**
 {% highlight python %}
@@ -146,7 +146,7 @@ format함수 또한 왼쪽정렬이 가능하다.
 >>> "{0:!<10}".format("Hello")
 'Hello!!!!!'
 {% endhighlight %}
-공백은 <, >, ^중 하나를 사용하기전에 원하는 문자를 넣고 정렬을 사용하면 공백을 채울 수 있다.
+공백은 <, >, ^중 하나를 사용하기전에 원하는 문자를 넣고 정렬을 사용하면 공백을 채울 수 있다.<br>
 
 **소수점 표현하기**
 {% highlight python %}
@@ -154,21 +154,21 @@ format함수 또한 왼쪽정렬이 가능하다.
 >>> "{0:0.3f}".format(radi)
 '3.142'
 {% endhighlight %}
-위에서 소수점을 표현한것처럼 f를 사용하면 원하는 자리까지 출력할 수 있다.
+위에서 소수점을 표현한것처럼 f를 사용하면 원하는 자리까지 출력할 수 있다.<br>
 
 {% highlight python %}
 >>> radi = 3.14159265358979323846264338327950288
 >>> "{0:10.3f}".format(radi)
 '     3.142'
 {% endhighlight %}
-물론 위와같이 10자리를 만들어서 넣을 수도 있다.
+물론 위와같이 10자리를 만들어서 넣을 수도 있다.<br>
 
 **{ }**
 {% highlight python %}
 >>> "{{  }}".format()
 '{  }'
 {% endhighlight %}
-{}와 같은 중괄호 문자를 포매팅 문자가 아닌 문자 그대로 사용하고 싶으면 {{ }}이렇게 2개를 연속해서 사용하면된다.
+{}와 같은 중괄호 문자를 포매팅 문자가 아닌 문자 그대로 사용하고 싶으면 {{ }}이렇게 2개를 연속해서 사용하면된다.<br>
 
 <Blockquote>f 문자열 포매팅</Blockquote>
 {% highlight python %}
@@ -177,21 +177,21 @@ format함수 또한 왼쪽정렬이 가능하다.
 >>> f"I like {number} ({string})"
 'I like 7 (seven)'
 {% endhighlight %}
-파이썬 3.6이상 버전부터는 f 문자열 포매팅을 사용할 수 있다. 그 아래 버전에서는 사용할 수 없다. 위와같이 문자열 앞에 f 접두사를 붙이면 문자열 포매팅 기능을 사용할 수 있다. f뒤에 오는 것은 큰따옴표도되고, 작은 따옴표도 가능하다.
+파이썬 3.6이상 버전부터는 f 문자열 포매팅을 사용할 수 있다. 그 아래 버전에서는 사용할 수 없다. 위와같이 문자열 앞에 f 접두사를 붙이면 문자열 포매팅 기능을 사용할 수 있다. f뒤에 오는 것은 큰따옴표도되고, 작은 따옴표도 가능하다.<br>
 
 {% highlight python %}
 >>> number = 7
 >>> f'I like number {number + 1}'
 'I like number 8'
 {% endhighlight %}
-위와같이 값을 더해서 출력도 가능하다.
+위와같이 값을 더해서 출력도 가능하다.<br>
 
 {% highlight python %}
 >>> d = {'string' : 'one', 'number' : 1}
 >>> f'I like {d["number"]} ({d["string"]})'
 'I like 1 (one)'
 {% endhighlight %}
-딕셔너리는 f문자열 포매팅에서 위와같이 사용된다.
+딕셔너리는 f문자열 포매팅에서 위와같이 사용된다.<br>
 
 {% highlight python %}
 >>> f'{"Hello":<10}'
@@ -202,7 +202,7 @@ format함수 또한 왼쪽정렬이 가능하다.
 '  Hello   '
 >>> 
 {% endhighlight %}
-정렬은 위와같이 사용된다.
+정렬은 위와같이 사용된다.<br>
 
 {% highlight python %}
 >>> f'{"Hello":-^10}'
@@ -210,7 +210,7 @@ format함수 또한 왼쪽정렬이 가능하다.
 >>> f'{"Hello":~<10}'
 'Hello~~~~~'
 {% endhighlight %}
-공백 또한 위와같이 사용된다.
+공백 또한 위와같이 사용된다.<br>
 
 {% highlight python %}
 >>> f'{radi:0.3f}'
@@ -218,7 +218,7 @@ format함수 또한 왼쪽정렬이 가능하다.
 >>> f'{radi:10.3f}'
 '     3.142'
 {% endhighlight %}
-소수점과 공백을 넣은 소수점은 위와 같이 사용한다.
+소수점과 공백을 넣은 소수점은 위와 같이 사용한다.<br>
 
 {% highlight python %}
 >>> f'{{  }}'
