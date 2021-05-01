@@ -53,6 +53,7 @@ categories: python
 
 -----
 
+<br>
 <Blockquote>작은따옴표 사용하기</Blockquote>
 {% highlight python %}
 >>> string = "I'm programmer"
@@ -161,4 +162,28 @@ World
 >>> string * 2
 'HelloHello'
 {% endhighlight %}
+
+<Blockquote>곱하기 응용</Blockquote>
+곱하기를 사용하기 좋은 경우는 구간을 나눠서 깔끔하게 보이도록 할 때 사용하면 좋다.
+{% highlight python %}
+print("-" * 30)
+print("Hello World")
+print("-" * 30)
+{% endhighlight %}
+
+위와같이 사용할 경우 아래와 같이 출력된다.
+{% highlight python %}
+------------------------------
+Hello World
+------------------------------
+{% end highlight %}
+
+<Blockquote>문자열 길이 구하기</Blockquote>
+파이썬에서 len 함수를 사용하면 문자열의 길이를 알 수 있다.
+{% highlight python %}
+>>> string = "Hello World"
+>>> len(string)
+11
+{% endhighlight %}
+<br>
 
