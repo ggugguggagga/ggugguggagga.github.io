@@ -37,7 +37,7 @@ std::cin >> something;
 {% endhighlight %}
 
 
-Since ```cout``` is flushed, ```''Hello''``` is displayed, and ```cin``` is entered, you can see the code behaves as intended. However, when executing the ```cin.tie(NULL)``` code, it does not flush after ```cout```, so ```cin``` is executed immediately, and ```''Hello''``` in the console.  will not be displayed.<br>
+Since ```cout``` is flushed, ```"Hello"``` is displayed, and ```cin``` is entered, you can see the code behaves as intended. However, when executing the ```cin.tie(NULL)``` code, it does not flush after ```cout```, so ```cin``` is executed immediately, and ```"Hello"``` in the console.  will not be displayed.<br>
 (But when I run it in VS, it outputs normally. Why is this... It shouldn't be.)
 <br><br>
 
