@@ -11,9 +11,26 @@ categories: python
 <summary>English</summary>
 <div markdown="1">
 
+List data type
+=====
 
 
+{% highlight python %}
+>>> num = [1, 2, 3, 4, 5]
+{% endhighlight %}
+In Python, lists are made up of commas in square brackets for variables, as shown above. It looks like an array in C++, but you don't have to specify the size.<br>
+So what about the data type?
 
+{% highlight python %}
+>>> a = []
+>>> b = [1, 2, 3]
+>>> c = [1.1, 2.2, 3.3]
+>>> d = ['one', 'two', 'three']
+>>> e = [1, 2.2, 'three']
+>>> f = [1, 2, 3, [1.1, 2.2, 3.3], ['one', 'two', 'three']]
+{% endhighlight %}
+You can put spaces, numbers, mixtures, letters, and even arrays themselves, as shown in the code above.<br>
+In other words, all types are possible.
 
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
@@ -33,9 +50,10 @@ categories: python
 {% highlight python %}
 >>> a = []
 >>> b = [1, 2, 3]
->>> c = [1, 2, 3, 'one', 'two']
+>>> c = [1.1, 2.2, 3.3]
 >>> d = ['one', 'two', 'three']
->>> e = [1, 2, ['one', 'two'] ]
+>>> e = [1, 2.2, 'three']
+>>> f = [1, 2, 3, [1.1, 2.2, 3.3], ['one', 'two', 'three']]
 {% endhighlight %}
 위에 코드에 보이는 것 처럼 공백, 숫자, 혼합, 문자, 심지어 배열 자체도 넣을 수 있다.<br>
 즉, 모든 유형이 가능하다.
