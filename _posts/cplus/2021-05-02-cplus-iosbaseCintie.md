@@ -1,71 +1,66 @@
 ---
 layout: post
-title: BaekJoon[15552]
-image: baekjoon.png
-date: 2021-05-02-14:41
-tags: [baekjoon]
-categories: baekjoon
+title: ios_base::sync_with_stdio(false), cin.tie(NULL)
+image: c++.png
+date: 2021-05-02-15:57
+tags: [c++, ios_base::sync_with_stdio(false), cin.tie(NULL)]
+categories: cplus
 ---
 
-># BaekJoon Number [15552]
+<details>
+<summary>English</summary>
+<div markdown="1">
+
+>## ios_base::sync_with_stdio(false)
 
 
 
-**Problem:**<br>
-본격적으로 for문 문제를 풀기 전에 주의해야 할 점이 있다. 입출력 방식이 느리면 여러 줄을 입력받거나 출력할 때 시간초과가 날 수 있다는 점이다.<br>
-C++을 사용하고 있고 ```cin/cout```을 사용하고자 한다면, ```cin.tie(NULL)과 sync_with_stdio(false)```를 둘 다 적용해 주고, endl 대신 개행문자(```\n```)를 쓰자. 단, 이렇게 하면 더 이상 ```scanf/printf/puts/getchar/putchar``` 등 C의 입출력 방식을 사용하면 안 된다.<br>
-Java를 사용하고 있다면, ```Scanner```와 ```System.out.println``` 대신 ```BufferedReader```와 ```BufferedWriter```를 사용할 수 있다. ```BufferedWriter.flush```는 맨 마지막에 한 번만 하면 된다.<br>
-Python을 사용하고 있다면, ```input``` 대신 ```sys.stdin.readline```을 사용할 수 있다. 단, 이때는 맨 끝의 개행문자까지 같이 입력받기 때문에 문자열을 저장하고 싶을 경우 ```.rstrip()```을 추가로 해 주는 것이 좋다.<br>
-또한 입력과 출력 스트림은 별개이므로, 테스트케이스를 전부 입력받아서 저장한 뒤 전부 출력할 필요는 없다. 테스트케이스를 하나 받은 뒤 하나 출력해도 된다.<br>
-자세한 설명 및 다른 언어의 경우는 [이 글](https://www.acmicpc.net/board/view/22716)에 설명되어 있다.<br>
-[이 블로그 글](https://www.acmicpc.net/blog/view/55)에서 BOJ의 기타 여러 가지 팁을 볼 수 있다.<br><vr>
+Since standard streams are connected to each other, you can use ```C``` in ```C++```. However, when the above code is executed, the connection between streams is terminated, and C and C++ become independent buffers.
 
-**Input:**첫 줄에 테스트케이스의 개수 T가 주어진다. T는 최대 1,000,000이다. 다음 T줄에는 각각 두 정수 A와 B가 주어진다. A와 B는 1 이상, 1,000 이하이다.<br>
-
-**Output:**각 테스트케이스마다 A+B를 한 줄에 하나씩 순서대로 출력한다.
+>### Buffer
+###### The buffer is a place to temporarily store data when transferring data from A to B. For example, when viewing YouTube, the gray line represents the buffer.
 
 
-{% highlight c++ %}
-#include <iostream>
-#include <vector>
-using namespace std;
 
-int main(){
-	cin.tie(NULL);
-	ios_base::sync_with_stdio(false);
-	int num, a, b;
-	vector<int>total;
-	cin >> num;
-	
-	for(int i = 0; i < num; i++) {
-		cin >> a >> b;
-		total.push_back(a + b);
-	}
-	for(auto data: total) {
-		cout << data << "\n";
-	}
-}
-{% endhighlight %}
+However, you should not use C's ```scanf/prinf/puts/getchar/putchar, etc.``` because using C's I/O may result in unintended results. Also, the order of output may not come out properly in multi-threaded. Since the buffers used in C and C++ have C++ exclusive buffers, the number of buffers is reduced and the speed is increased.<br>
 <br>
-처음에는 위와같이 작성해도 백준에서는 맞다고 통과를 해줬는데, 나중에 문제를 다시 읽어보니 각 테스트케이스마다 한 줄에 하나씩 순서대로 출력해야하는것을 보고 아래의 코드로 다시 제출해보니 위 아래 모두 맞다고 통과를 시켜줬다.
+
+>## cin.tie(NULL)
+
+
+Before executing the above code, ```cin``` and ```cout``` are connected. In other words, it unties one stream to be automatically flushed before ```I/O``` to another stream (which makes it visible to the console). Also, ```cin``` is the default value before executing the above code, so if you execute the following code,
+
 
 {% highlight c++ %}
-#include <iostream>
-using namespace std;
-
-int main(){
-	cin.tie(NULL);
-	ios_base::sync_with_stdio(false);
-	int num, a, b;
-	cin >> num;
-	
-	for(int i = 0; i < num; i++) {
-		cin >> a >> b;
-		cout << a + b << "\n";
-	}
-}
+std::cout << "Hello";
+std::cin >> something;
 {% endhighlight %}
+
+
+Since ```cout``` is flushed, ```''Hello''``` is displayed, and ```cin``` is entered, you can see the code behaves as intended. However, when executing the ```cin.tie(NULL)``` code, it does not flush after ```cout```, so ```cin``` is executed immediately, and ```''Hello''``` in the console.  will not be displayed.<br>
+(But when I run it in VS, it outputs normally. Why is this... It shouldn't be.)
 <br><br>
+
+>### Tie
+>>##### Flush before input request and output ```"Hello"```
+
+
+
+>### Untie
+>>##### Ask for ```cin``` input without ```cout``` flush. Basically, the output of ```cout``` is not output until the buffer is full or manually flushed. Therefore, if you want to flush before ```cin``` when untie, you have to do it manually.
+
+
+
+First of all, the reason for using it has an advantage in terms of speed. C language ```scanf/printf``` is already fast by itself, so it doesn't matter, but in C++ ```cout``` doesn't make much difference, but ```cin``` is more than twice as slow. If you want to use it quickly in an algorithm problem, you can use ```cin.tie(NULL)```.<br>
+However, if you just use this function, if you accidentally use the ```I/O``` function of the C language, unintended results will occur, so be careful about this point.<br>
+<br>
+
+In terms of speed, ```endl``` can also play a role in clearing the output buffer as well as outputting text, making it visible right on the screen, which is very slow. So, in terms of speed, it is better to use ```\n```.
+
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+</div>
+</details>
 
 >## ios_base::sync_with_stdio(false)
 
@@ -106,7 +101,7 @@ std::cin >> something;
 >>##### ```cout```flush가 안된채로 ```cin```입력을 요구한다. 기본적으로 ```cout```의 output은 버퍼가 가득차거나 수동으로 flush하기전까지는 출력이 안된다. 그러므로 untie일때 ```cin```전에 flush를 하고 싶으면 수동으로 flush해줘야한다.
 
 
-백준에서는 ```cin.tie```만 ```NULL```하라고 적혀있는데 찾아보면 ```cout.time(NULL)```도 있는것을 확인할 수 있다. 둘다 적혀있지 않은걸로봐서 하나만해도 잘되는것 같다(?).<br>
+
 일단 이걸 사용하는 이유는 속도면에서 이점을 가진다. C언어의 ```scanf/printf```는 이미 이 자체로 빠르기 때문에 상관없지만 C++에서 ```cout```은 별차이가 없지만 ```cin```은 2배이상 차이가 나기 때문에 알고리즘문제에서 빠르게 사용하고자 한다면 ```cin.tie(NULL)```을 사용하면된다.<br>
 그렇다고 이 함수를 막쓰면 실수로 C언어의 ```I/O```기능을 사용한다면 의도치 않은 결과가 나오니 이 점은 주의해야한다.<br>
 <br>
