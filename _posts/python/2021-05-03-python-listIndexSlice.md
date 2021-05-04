@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 리스트 인덱싱 & 슬라이싱[Python List Indexing & slicing]
+title: 리스트 인덱싱 & 슬라이싱[Python List Indexing & Slicing]
 image: python.jpg
 date: 2021-05-03-21:57
-tags: [python, Indexing, slicing]
+tags: [python, Indexing, Slicing]
 categories: python
 ---
 
@@ -15,6 +15,91 @@ categories: python
 List indexing & slicing
 =====
 
+
+>Indexing
+
+
+
+Like indexing and slicing used in strings
+
+{% highlight python %}
+>>> number = [1, 2, 3, 4, 5]
+{% endhighlight %}
+
+Use it as above and remember that ```number[0] = 1```.<br>
+If you have tried C++ among other languages other than Python, you can perform operations such as inserting a value into an index like this: ```number[0] = 6```. Also, Python can put negative numbers in indexes.
+
+{% highlight python %}
+>>> number = [1, 2, 3, 4, 5]
+>>> number[-1] = 7
+>>> number
+[1, 2, 3, 4, 7]
+{% endhighlight %}
+
+You can also use it as above.<br>
+
+{% highlight python %}
+>>> something = [1, 2, 3, ['a', 'b', 'c']]
+>>> something[3]
+['a', 'b', 'c']
+{% endhighlight %}
+
+In Python, you can have another list in a list, so if you print the 3rd index as above, the list in ```something``` is displayed. If you want to print ```b``` from the list in ```something```, you can print the values in a double array as shown below.
+
+
+{% highlight python %}
+>>> something = [1, 2, 3, ['a', 'b', 'c']]
+>>> something[3][1]
+'b'
+{% endhighlight %}
+
+
+{% highlight python %}
+>>> something = [1, 2, 3, ['a', 'b', 'c', ['one', 'two', 'three']]]
+>>> something[3][3][1]
+'two'
+
+
+>>> something = [1, 2, 3, ['a', 'b', 'c', ['one', 'two', 'three', ['Hello']]]]
+>>> something[3][3][3][0]
+'Hello'
+{% endhighlight %}
+
+Triple and quadruple are also possible.
+
+
+>Slicing
+
+
+List slicing is almost the same as string slicing.
+
+{% highlight python %}
+>>> something = [0, 1, 2, 3, 4, 5]
+>>> something[0:3]
+[0, 1, 2]
+{% endhighlight %}
+
+The meaning of ```[0:3]``` means to output from the digit of index 0 to the [2] index. ([3] is not included.)
+
+{% highlight python %}
+>>> something = [0, 1, 2, 3, 4, 5]
+>>> something[:3]
+[0, 1, 2]
+>>> something[3:]
+[3, 4, 5]
+{% endhighlight %}
+
+As above, ```[start digit: ending digit]```' If the starting digit is empty and only the ending digit is inserted, the output is printed from the beginning to the ending digit. The value is displayed until the end. Of course, if you want to print from the beginning to the end, you just have to enter nothing in the start and end digits.
+
+{% highlight python %}
+>>> something = [0, 1, 2, ['one', 'two', 'three'], 3, 4, 5]
+>>> something[2:5]
+[2, ['one', 'two', 'three'], 3]
+>>> something[3][:2]
+['one', 'two']
+{% endhighlight %}
+
+Lists in the list can also be used as above.
 
 
 -----------------------------------------------------------------------------------------------
@@ -47,7 +132,7 @@ List indexing & slicing
 [1, 2, 3, 4, 7]
 {% endhighlight %}
 
-위와같이 사용할 수 도있다.<br>
+위와같이 사용할 수도있다.<br>
 
 {% highlight python %}
 >>> something = [1, 2, 3, ['a', 'b', 'c']]
