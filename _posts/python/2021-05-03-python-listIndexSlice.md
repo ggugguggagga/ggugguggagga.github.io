@@ -89,7 +89,7 @@ The meaning of ```[0:3]``` means to output from the digit of index 0 to the [2] 
 [3, 4, 5]
 {% endhighlight %}
 
-As above, ```[start digit: ending digit]```' If the starting digit is empty and only the ending digit is inserted, the output is printed from the beginning to the ending digit. The value is displayed until the end. Of course, if you want to print from the beginning to the end, you just have to enter nothing in the start and end digits.
+As above, ```[start digit: ending digit]``` If the starting digit is empty and only the ending digit is inserted, the output is printed from the beginning to the ending digit. The value is displayed until the end. Of course, if you want to print from the beginning to the end, you just have to enter nothing in the start and end digits.
 
 {% highlight python %}
 >>> something = [0, 1, 2, ['one', 'two', 'three'], 3, 4, 5]
