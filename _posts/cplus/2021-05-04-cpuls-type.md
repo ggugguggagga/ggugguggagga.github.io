@@ -15,11 +15,11 @@ categories: cplus
 
 |Type|Explanation|Example|
 |:---:|:---:|:---:|
-|```(signed) int```<br>```signed```|Represents a signed integer (positive or negative), and the range of values varies from compiler to compiler (mostly 4 bytes).|```int i = -7;```<br>```signed int i = -6;``` <br>```signed i = -5;```|
-|```(signed) short (int)```|Small range integer (mostly expressed as 2 bytes)|```short s = 10;```<br>```short int s = 11;```<br>```signed short s = 12;```<br>```signed short int s = 13;```|
+|```(signed) int```<br><br>```signed```|Represents a signed integer (positive or negative), and the range of values varies from compiler to compiler (mostly 4 bytes).|```int i = -7;```<br><br>```signed int i = -6;``` <br><br>```signed i = -5;```|
+|```(signed) short (int)```|Small range integer (mostly expressed as 2 bytes)|```short s = 10;```<br><br>```short int s = 11;```<br><br>```signed short s = 12;```<br><br>```signed short int s = 13;```|
 |```(signed) long (int)```|Large range integers (mostly represented by 4 bytes)|```long l = -7L;```|
 |```(signed) long long (int)```|Represents a very large range of integers. The specific range varies from compiler to compiler, but is at least larger than the ```long``` type (usually 8 bytes).|```long long ll = 14LL;```|
-|```unsigned (int)```<br>```unsigned short (int)```<br>```unsigned long (int)```<br>```unsigned long long (int)```|Limit the range of integer types above to ```>=0```.|```unsigned int i = 2U;``` <br>```unsigned j = 5U;```<br>```unsigned short s = 23U;```<br>```unsigned long l = 5400UL;```<br>```unsigned long long ll = 140ULL;```|
+|```unsigned (int)```<br><br>```unsigned short (int)```<br><br>```unsigned long (int)```<br><br>```unsigned long long (int)```|Limit the range of integer types above to ```>=0```.|```unsigned int i = 2U;```<br><br>```unsigned j = 5U;```<br><br>```unsigned short s = 23U;```<br><br>```unsigned long l = 5400UL;```<br><br>```unsigned long long ll = 140ULL;```|
 |```floaat```|single floating-point number|```float f = 7.2f;```|
 |```double```|double Floating point number. Precision is at least greater than float.|```double d = 7.2;```|
 |```long double```|long double Floating point number. Precision is at least greater than ```double```.|```long double d = 16.98L;```|
