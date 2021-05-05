@@ -35,7 +35,7 @@ categories: cplus
 |```char32_t```|32비트 단일 문자|```char32_t c32 = U'a';```|
 |```wchar_t```|단일 확장(single wide) 문자. 구체적인 크기는 컴파일러마다 다르다.|```wchar_t w = L'a';```|
 |```bool```|부울 타입. true나 false 중 하나의 값을 가진다.|```bool b = true;```|
-|```std::byte```|한 바이트를 표현한다. C++17 이전에는 한 바이트를 <br>```char```이나 ```unsigned char```로 표현했다. 이러한 표현은 문자를 다루는 듯한 느낌이 준다. 반면 ```std::byte```로 표현하면 <br>메모리의 한 바이트라는의미를 명확히 드러낼 수 있다.|```std::byte b{42};```|
+|```std::byte```|한 바이트를 표현한다. C++17 이전에는 한 바이트를 <br>```char```이나 ```unsigned char```로 표현했다. <br>이러한 표현은 문자를 다루는 듯한 느낌이 준다. 반면 ```std::byte```로 표현하면 <br>메모리의 한 바이트라는의미를 명확히 드러낼 수 있다.|```std::byte b{42};```|
 {:.mbtablestyle}
 
 
