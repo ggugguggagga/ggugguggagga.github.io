@@ -11,6 +11,69 @@ categories: cplus
 <summary>English</summary>
 <div markdown="1">
 
+># Type
+
+|Type|Explanation|Example|
+|:---:|:---:|:---:|
+|```(signed) int```<br>```signed```|Represents a signed integer (positive or negative), and the range of values varies from compiler to compiler (mostly 4 bytes).|```int i = -7;```<br>```signed int i = -6;``` <br>```signed i = -5;```|
+|```(signed) short (int)```|Small range integer (mostly expressed as 2 bytes)|```short s = 10;```<br>```short int s = 11;```<br>```signed short s = 12;```<br>```signed short int s = 13;```|
+|```(signed) long (int)```|Large range integers (mostly represented by 4 bytes)|```long l = -7L;```|
+|```(signed) long long (int)```|Represents a very large range of integers. The specific range varies from compiler to compiler, but is at least larger than the ```long``` type (usually 8 bytes).|```long long ll = 14LL;```|
+|```unsigned (int)```<br>```unsigned short (int)```<br>```unsigned long (int)```<br>```unsigned long long (int)```|Limit the range of integer types above to ```>=0```.|```unsigned int i = 2U;``` <br>```unsigned j = 5U;```<br>```unsigned short s = 23U;```<br>```unsigned long l = 5400UL;```<br>```unsigned long long ll = 140ULL;```|
+|```floaat```|single floating-point number|```float f = 7.2f;```|
+|```double```|double Floating point number. Precision is at least greater than float.|```double d = 7.2;```|
+|```long double```|long double Floating point number. Precision is at least greater than ```double```.|```long double d = 16.98L;```|
+|```char```|Single character|```char ch = 'a';```|
+|```char16_t```|16-bit single character|```char16_t c16 = u'a';```|
+|```char32_t```|32-bit single character|```char32_t c32 = U'a';```|
+|```wchar_t```|Single wide character. The specific size varies from compiler to compiler.|```wchar_t w = L'a';```|
+|```bool```|Boolean type. It can be either true or false.|```bool b = true;```|
+|```std::byte```|Represents one byte. Prior to C++17, a byte was represented as <br>```char``` or ```unsigned char```. <br>This expression gives the feeling of dealing with characters. On the other hand, when expressed as ```std::byte```, the meaning of <br>a byte of memory can be clearly revealed.|```std::byte b{42};```|
+{:.mbtablestyle}
+
+
+Variables can be changed during execution, which is called casting (dynamic type casting).
+
+{% highlight c++ %}
+int int_num = 3;
+dobule dou_num = 4.5;
+
+int_num += dou_num;
+{% endhighlight %}
+
+For example, if you write code like the above, the VS compiler warns us that data loss will occur. This is good if the programmer makes a mistake, but if it is intended, you need to tell the compiler to explicitly cast it. There are three ways to do that.
+
+
+{% highlight c++ %}
+float num = 3.14;
+
+int a = (int)num;
+{% endhighlight %}
+It is the most commonly used method in C language, but it is also used in C++. This is not recommended.
+
+{% highlight c++ %}
+float num = 3.14;
+
+int a = int(num);
+{% endhighlight %}
+It can be used as above, but it is rarely used.
+
+{% highlight c++ %}
+float num = 3.14;
+
+int a = static_cast<int>(num);
+{% endhighlight %}
+The code above is long, but it is the clearest way to use this method.<br>
+<br>
+
+
+In addition to the above cases, there are times when the variable type is forcedly cast.<br>
+For example, if the type ```short``` is assigned to ```long```, it is forcibly converted. This is because the precision of the ```long``` type is greater than that of the ```short```.
+
+{% highlight c++ %}
+short S_num;
+long L_num = S_num; //No need for explicit casting.
+{% endhighlight %}
 
 ---------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
