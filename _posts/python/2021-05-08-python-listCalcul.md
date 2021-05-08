@@ -11,6 +11,38 @@ categories: python
 <summary>English</summary>
 <div markdown="1">
 
+List Calculation
+=====
+
+
+In a list, you can also use symbols such as '+' or '*' to perform operations.
+
+># +
+
+
+{% highlight python %}
+>>> num1 = [1, 2, 3]
+>>> num2 = [4, 5, 6]
+>>> num1 + num2
+[1, 2, 3, 4, 5, 6]
+{% endhighlight %}
+
+You can perform an operation to add a list as above.
+
+># *
+
+
+{% highlight python %}
+>>> num = [1, 2, 3]
+>>> num * 3
+[1, 2, 3, 1, 2, 3, 1, 2, 3]
+{% endhighlight %}
+
+Like strings, lists can be iterated multiple times through multiplication.
+<br>
+<br>
+
+One thing to note here is that you can't calculate letters and numbers, so you have to put in a code such as converting numbers into letters.
 
 
 -----------------------------------------------------------------------------------------------
@@ -25,7 +57,7 @@ categories: python
 
 리스트에서도 '+'나 '*'등 기호를 사용하여 연산을 할 수 있다.
 
-># '+'
+># +
 
 
 {% highlight python %}
@@ -37,7 +69,7 @@ categories: python
 
 위와같이 리스트를 더하는 연산을 할 수 있다.
 
-># '*'
+># *
 
 
 {% highlight python %}
